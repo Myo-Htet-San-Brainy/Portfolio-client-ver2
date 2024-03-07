@@ -16,7 +16,7 @@ const Blogs = () => {
   ];
 
   return (
-    <div className="py-20 ">
+    <div className="py-20 " id="blogs">
       <SectionTitle text={"Blogs For You"} color={"border-orange-400"} />
       {/* a div that serves two reasons - 1.To layout children based on screen
       size, to center children across screen horizontally */}

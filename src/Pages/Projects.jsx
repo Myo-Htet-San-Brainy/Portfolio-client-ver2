@@ -17,7 +17,7 @@ const Projects = () => {
   ];
 
   return (
-    <div className="py-20 ">
+    <div className="py-20 " id="projects">
       <SectionTitle
         text={"Some Projects I've Crafted"}
         color={"border-blue-400"}

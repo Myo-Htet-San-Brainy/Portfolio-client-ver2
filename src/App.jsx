@@ -1,5 +1,5 @@
 import React from "react";
-import { About, Projects, Blogs, Advice } from "./Pages";
+import { About, Projects, Blogs, Advice, Footer } from "./Pages";
 import { SeperationLine } from "./Components";
 
 const App = () => {
@@ -12,6 +12,8 @@ const App = () => {
       <Blogs />
       <SeperationLine />
       <Advice />
+      <SeperationLine />
+      <Footer />
     </div>
   );
 };

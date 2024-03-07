@@ -3,7 +3,7 @@ import { Navbar, AboutMain, SeperationLine } from "../Components";
 
 const About = () => {
   return (
-    <div className="flex flex-col h-screen">
+    <div className="flex flex-col h-screen" id="aboutMe">
       <Navbar />
       <SeperationLine />
       <div className="pt-40 grow ">

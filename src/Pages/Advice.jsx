@@ -3,7 +3,7 @@ import { SectionTitle } from "../Components";
 
 const Advice = () => {
   return (
-    <div className="py-20 ">
+    <div className="py-20 " id="advice">
       <SectionTitle text={"Some Advice From Me"} color={"border-blue-400"} />
       {/* a div that serves two reasons - 1.To layout children based on screen
       size, to center children across screen horizontally */}
