@@ -1,11 +1,11 @@
 import React from "react";
-import { Navbar, AboutMain } from "../Components";
+import { Navbar, AboutMain, SeperationLine } from "../Components";
 
 const About = () => {
   return (
-    <div className="bg-white flex flex-col h-screen">
+    <div className="flex flex-col h-screen">
       <Navbar />
-      <div class="w-[97%] h-px bg-gray-200 mx-auto"></div>
+      <SeperationLine />
       <div className="pt-40 grow ">
         <AboutMain />
       </div>

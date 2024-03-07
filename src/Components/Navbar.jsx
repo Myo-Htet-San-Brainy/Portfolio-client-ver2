@@ -2,7 +2,14 @@ import React from "react";
 import { FaFacebook } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
-import GradientText from "./GradientText";
+import { GradientText, NavLink } from "./index";
+
+const navLinks = [
+  { id: 1, text: "About Me", link: "" },
+  { id: 2, text: "Projects", link: "" },
+  { id: 3, text: "Blogs", link: "" },
+  { id: 4, text: "Advice", link: "" },
+];
 
 const Navbar = () => {
   return (
@@ -15,30 +22,10 @@ const Navbar = () => {
           <GradientText text={"Brainy"} />
         </div>
         <div className="flex mr-auto space-x-7 font-bold text-black text-sm ">
-          <div className="py-8 hover:shadow-bottom  transition-all duration-200">
-            <a
-              href=""
-              className="hover:text-blue-400 transition-all duration-200 "
-            >
-              About Me
-            </a>
-          </div>
-          <div className="py-8 hover:shadow-bottom  transition-all duration-200">
-            <a
-              href=""
-              className="hover:text-blue-400 transition-all duration-200 "
-            >
-              Projects
-            </a>
-          </div>
-          <div className="py-8 hover:shadow-bottom  transition-all duration-200">
-            <a
-              href=""
-              className="hover:text-blue-400 transition-all duration-200 "
-            >
-              Articles
-            </a>
-          </div>
+          {navLinks.map((navLink) => {
+            const { id, text, link } = navLink;
+            return <NavLink key={id} text={text} link={link} />;
+          })}
         </div>
         <div className="flex space-x-7 text-sm font-bold">
           <a
