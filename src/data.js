@@ -1,6 +1,4 @@
-import { FaFacebook } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa";
+import { FaFacebook, FaLinkedin, FaGithub } from "react-icons/fa";
 
 export const navLinks = [
   { id: 1, text: "About Me", link: "#aboutMe" },
@@ -16,12 +14,12 @@ export const socialIcons = [
     Component: FaFacebook,
   },
   {
-    id: 1,
+    id: 2,
     link: "",
     Component: FaGithub,
   },
   {
-    id: 1,
+    id: 3,
     link: "",
     Component: FaLinkedin,
   },

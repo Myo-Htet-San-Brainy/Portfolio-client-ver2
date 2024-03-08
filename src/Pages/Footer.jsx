@@ -1,7 +1,14 @@
 import React from "react";
 import { socialIcons } from "../data";
+import { useLinks } from "../Context";
 
 const Footer = () => {
+  const links = useLinks();
+  if (Object.keys(links).length !== 0 && !socialIcons[0].link) {
+    socialIcons[0].link = links.facebook;
+    socialIcons[1].link = links.github;
+    socialIcons[2].link = links.linkedIn;
+  }
   return (
     <div className="p-14 text-center">
       <div className="w-fit mx-auto flex space-x-7  text-xl text-black">

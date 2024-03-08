@@ -1,7 +1,14 @@
 import { GradientText, NavLink } from "./index";
 import { navLinks, socialIcons } from "../data";
+import { useLinks } from "../Context";
 
 const Navbar = () => {
+  const links = useLinks();
+  if (Object.keys(links).length !== 0 && !socialIcons[0].link) {
+    socialIcons[0].link = links.facebook;
+    socialIcons[1].link = links.github;
+    socialIcons[2].link = links.linkedIn;
+  }
   return (
     <div className="px-10">
       <div className="lg:hidden text-center py-6 italic text-3xl ">

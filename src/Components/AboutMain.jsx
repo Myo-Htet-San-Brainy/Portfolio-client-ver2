@@ -4,9 +4,9 @@ import GradientText from "./GradientText";
 const AboutMain = () => {
   return (
     <div className="w-[80%] mx-auto  text-center">
-      <h1 className="font-bold text-2xl lg:text-5xl mb-7">
+      <div className="font-bold text-2xl lg:text-5xl mb-7">
         <GradientText text={"Hey, I'm Brainy"} />
-      </h1>
+      </div>
       <h1 className="font-light lg:w-[80%] mx-auto text-3xl lg:text-5xl  text-black mb-16 capitalize">
         A passionate software enthusiast focusing on web development
       </h1>
