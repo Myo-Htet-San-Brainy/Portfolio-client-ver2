@@ -7,7 +7,7 @@ const Footer = () => {
   if (Object.keys(links).length !== 0 && !socialIcons[0].link) {
     socialIcons[0].link = links.facebook;
     socialIcons[1].link = links.github;
-    socialIcons[2].link = links.linkedIn;
+    socialIcons[2].link = links.linkedin;
   }
   return (
     <div className="p-14 text-center">
@@ -18,6 +18,7 @@ const Footer = () => {
             <a
               key={id}
               href={link}
+              target="_blank"
               className="hover:text-blue-400 transition-all duration-200"
             >
               <Component />

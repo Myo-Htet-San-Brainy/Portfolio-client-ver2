@@ -6,10 +6,18 @@ import { useDataFetchingStates } from "./Context";
 const App = () => {
   const { isError, isLoading } = useDataFetchingStates();
   if (isLoading) {
-    return <div>loading</div>;
+    return (
+      <div className="h-screen bg-white grid place-content-center text-3xl uppercase font-bold text-blue-400">
+        loading
+      </div>
+    );
   }
   if (isError) {
-    return <div>error</div>;
+    return (
+      <div className="h-screen bg-white grid place-content-center text-3xl uppercase font-bold text-red-400">
+        error
+      </div>
+    );
   }
   return (
     <div className="bg-white">
