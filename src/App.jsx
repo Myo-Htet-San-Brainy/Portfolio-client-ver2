@@ -1,10 +1,11 @@
 import React from "react";
-import { About, Projects, Blogs, Advice, Footer } from "./Pages";
+import { About, Projects, Blogs, Advice, Footer, BlogDetails } from "./Pages";
 import { SeperationLine } from "./Components";
-import { useDataFetchingStates } from "./Context";
+import { useBlog, useDataFetchingStates } from "./Context";
 
 const App = () => {
   const { isError, isLoading } = useDataFetchingStates();
+  const { blog } = useBlog();
   if (isLoading) {
     return (
       <div className="h-screen bg-white grid place-content-center text-3xl uppercase font-bold text-blue-400">
@@ -18,6 +19,9 @@ const App = () => {
         error
       </div>
     );
+  }
+  if (Object.keys(blog).length !== 0) {
+    return <BlogDetails />;
   }
   return (
     <div className="bg-white">

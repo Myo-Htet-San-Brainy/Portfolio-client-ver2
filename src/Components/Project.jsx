@@ -1,5 +1,6 @@
 import { FaGlobe } from "react-icons/fa6";
 import { FaGithub } from "react-icons/fa";
+import { trimText } from "../utils/trimText";
 
 const Project = ({ img, name, text, gitHubLink, siteUrl }) => {
   return (
@@ -8,8 +9,12 @@ const Project = ({ img, name, text, gitHubLink, siteUrl }) => {
         <img src={img} alt={name} />
       </figure>
       <div className="card-body text-white">
-        <h2 className="card-title font-bold">{name}</h2>
-        <p className="font-light text-lg tracking-wide">{text}</p>
+        <h2 className="card-title font-bold h-16">
+          {trimText(name) ? trimText(name) + " . . ." : name}
+        </h2>
+        <p className="font-light text-lg tracking-wide">
+          {trimText(text) ? trimText(text) + " . . ." : text}
+        </p>
         <div className="mt-2 flex justify-between text-2xl">
           <a href={siteUrl}>
             <FaGlobe className="hover:text-blue-600 transition-all duration-300" />
