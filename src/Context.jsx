@@ -5,6 +5,7 @@ const ProjectsContext = createContext(null);
 const LinksContext = createContext(null);
 const BlogsContext = createContext(null);
 const BlogContext = createContext(null);
+const ProjectContext = createContext(null);
 import { toast } from "react-toastify";
 
 const Context = ({ children }) => {
@@ -14,6 +15,7 @@ const Context = ({ children }) => {
   const [links, setLinks] = useState({});
   const [blogs, setBlogs] = useState([]);
   const [blog, setBlog] = useState({});
+  const [project, setProject] = useState({});
   async function getProjects() {
     try {
       const res = await instance.get("/projects");
@@ -59,7 +61,9 @@ const Context = ({ children }) => {
         <LinksContext.Provider value={links}>
           <BlogsContext.Provider value={blogs}>
             <BlogContext.Provider value={{ blog, setBlog }}>
-              {children}
+              <ProjectContext.Provider value={{ project, setProject }}>
+                {children}
+              </ProjectContext.Provider>
             </BlogContext.Provider>
           </BlogsContext.Provider>
         </LinksContext.Provider>
@@ -82,6 +86,9 @@ export function useBlogs() {
 }
 export function useBlog() {
   return useContext(BlogContext);
+}
+export function useProject() {
+  return useContext(ProjectContext);
 }
 
 export default Context;

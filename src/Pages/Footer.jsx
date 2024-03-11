@@ -32,7 +32,7 @@ const Footer = () => {
             href="mailto:myohtetsandrinksmilk@gmail.com"
             className="text-blue-400 hover:text-black transition-all duration-200"
           >
-            myohtetsandrinksmilk@gmail.com
+            myohtetsan231@gmail.com
           </a>
         </div>
         <div>
@@ -46,7 +46,7 @@ const Footer = () => {
       </div>
 
       <p className="mt-4 font-bol text-sm font-bold text-black">
-        All rights reserved@{new Date().getFullYear()}
+        &copy; {new Date().getFullYear()} Brainy
       </p>
     </div>
   );

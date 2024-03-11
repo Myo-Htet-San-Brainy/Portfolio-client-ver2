@@ -29,7 +29,7 @@ const Navbar = () => {
             href="mailto:myohtetsandrinksmilk@gmail.com"
             className="text-blue-400 hover:text-black transition-all duration-200"
           >
-            myohtetsandrinksmilk@gmail.com
+            myohtetsan231@gmail.com
           </a>
 
           <a
