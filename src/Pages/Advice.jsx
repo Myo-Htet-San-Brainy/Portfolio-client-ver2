@@ -12,11 +12,9 @@ const Advice = () => {
       bg-blue-400 rounded-lg text-white font-light text-lg tracking-wide"
       >
         <ol className="list-decimal">
-          <li>Have a goal</li>
-          <li>Have a plan for the goal</li>
-          <li>Stay consistent with the plan</li>
           <li>Stay positive with everything</li>
-          <li>Put it effort for real, I mean, for real</li>
+          <li>Be consistent</li>
+          <li>And work hard</li>
         </ol>
         <h1 className="mt-3 text-center font-bold text-2xl">
           Yes, in this exact order!
